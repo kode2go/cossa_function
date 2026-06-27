@@ -29,6 +29,8 @@ items_needed = {
     "Flora Margarine 500g": 2,
     "Serviettes": 500,
     "Refresher Towerl Sachets": 500,
+    "Paper Plates": 250,
+    "Paper Cups": 250,
 }
 
 st.title("COSSA 80th Function 🍽️ Food Tracker")
