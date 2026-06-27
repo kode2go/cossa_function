@@ -30,27 +30,6 @@ items_needed = {
 
 st.title("COSSA 80th Function 🍽️ Food Tracker")
 
-with st.form("contribution_form"):
-    name = st.text_input("Your name")
-    item = st.selectbox("What are you contributing?", list(items_needed.keys()))
-    quantity = st.number_input("Quantity", min_value=1, step=1)
-    note = st.text_input("Note optional")
-
-    submitted = st.form_submit_button("Submit contribution")
-
-    if submitted:
-        if not name.strip():
-            st.error("Please enter your name.")
-        else:
-            supabase.table("contributions").insert({
-                "name": name.strip(),
-                "item": item,
-                "quantity": int(quantity),
-                "note": note.strip()
-            }).execute()
-
-            st.success("Contribution saved successfully.")
-            st.rerun()
 
 # Load data
 response = supabase.table("contributions").select("*").order("created_at", desc=True).execute()
@@ -77,6 +56,29 @@ summary_df = pd.DataFrame(summary)
 
 st.subheader("📊 Summary")
 st.dataframe(summary_df, hide_index=True, use_container_width=True)
+
+with st.form("contribution_form"):
+    name = st.text_input("Your name")
+    item = st.selectbox("What are you contributing?", list(items_needed.keys()))
+    quantity = st.number_input("Quantity", min_value=1, step=1)
+    note = st.text_input("Note optional")
+
+    submitted = st.form_submit_button("Submit contribution")
+
+    if submitted:
+        if not name.strip():
+            st.error("Please enter your name.")
+        else:
+            supabase.table("contributions").insert({
+                "name": name.strip(),
+                "item": item,
+                "quantity": int(quantity),
+                "note": note.strip()
+            }).execute()
+
+            st.success("Contribution saved successfully.")
+            st.rerun()
+
 
 st.subheader("📝 Contributions")
 if df.empty:
