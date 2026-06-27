@@ -26,6 +26,7 @@ items_needed = {
     "Milk 2L": 10,
     "Drinks 2L": 10,
     "Water 2L": 10,
+    "Flora Margarine 500g": 2,
 }
 
 st.title("COSSA 80th Function 🍽️ Food Tracker")
