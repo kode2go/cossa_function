@@ -88,8 +88,4 @@ else:
         use_container_width=True
     )
 
-# Rows
-
-st.subheader("📊 Summary")
-
 
