@@ -3,7 +3,7 @@ import pandas as pd
 from supabase import create_client
 
 st.set_page_config(
-    page_title="COSSA 80th Function Food Tracker",
+    page_title="COSSA 80th Function Food Tracker v1.1",
     page_icon="🍽️",
     layout="centered"
 )
