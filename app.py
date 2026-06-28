@@ -42,7 +42,7 @@ decimal_items = {
     "Tomatoes kg",
 }
 
-st.title("COSSA 80th Function 🍽️ Food Tracker")
+st.title("COSSA 80th Function 🍽️ Food Tracker v1.1")
 
 # Load data
 response = supabase.table("contributions").select("*").order("created_at", desc=True).execute()
