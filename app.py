@@ -87,12 +87,23 @@ with st.form("contribution_form"):
     name = st.text_input("Your name")
     item = st.selectbox("What are you contributing?", list(items_needed.keys()))
 
-    quantity = st.number_input(
-        "Quantity",
-        min_value=0.1,
-        step=0.1,
-        format="%.2f"
-    )
+    if item in decimal_items:
+        quantity = st.number_input(
+            "Quantity",
+            min_value=0.1,
+            value=1.0,
+            step=0.1,
+            format="%.2f",
+            key="qty_float"
+        )
+    else:
+        quantity = st.number_input(
+            "Quantity",
+            min_value=1,
+            value=1,
+            step=1,
+            key="qty_int"
+        )
 
     note = st.text_input("Note optional")
 
