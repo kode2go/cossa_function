@@ -36,7 +36,7 @@ items_needed = {
     "Refresher Towel Sachets": 500,
     "Paper Plates": 250,
     "Paper Cups": 250,
-    "White Plastic Sheets": 20m, 
+    "White Plastic Sheets (m)": 20, 
 }
 
 decimal_items = {
