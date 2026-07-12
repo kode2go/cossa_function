@@ -26,8 +26,8 @@ items_needed = {
     "Spice beef kg": 2.0,
     "Tomatoes kg": 2.0,
     "Lettuce g": 500,
-    "Coffee boxes": 2,
-    "Tea boxes": 2,
+    "Coffee Tin 500g": 4,
+    "Tea boxes (100 pack)": 2,
     "Milk 2L": 10,
     "Drinks 2L": 10,
     "Water 2L": 10,
@@ -36,6 +36,7 @@ items_needed = {
     "Refresher Towel Sachets": 500,
     "Paper Plates": 250,
     "Paper Cups": 250,
+    "White Plastic Sheets": 20m, 
 }
 
 decimal_items = {
