@@ -3,7 +3,7 @@ import pandas as pd
 from supabase import create_client
 
 st.set_page_config(
-    page_title="COSSA 80th Function (22nd November) Food Tracker",
+    page_title="COSSA 80th Function Food Tracker",
     page_icon="🍽️",
     layout="centered"
 )
@@ -60,7 +60,7 @@ def show_success_modal(name, item, quantity):
     if st.button("Close"):
         st.rerun()
 
-st.title("COSSA 80th Function 🍽️ Food Tracker v1.1")
+st.title("COSSA 80th Function (22nd November) 🍽️ Food Tracker v1.1")
 
 # Load contributions
 response = supabase.table(TABLE_NAME).select("*").order("created_at", desc=True).execute()
