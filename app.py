@@ -37,6 +37,7 @@ items_needed = {
     "Paper Plates": 250,
     "Paper Cups": 250,
     "White Plastic Sheets (m)": 20, 
+    "Decor & Crockery": 1, 
 }
 
 decimal_items = {
