@@ -103,6 +103,28 @@ summary_df = pd.DataFrame(summary)
 st.subheader("📊 Summary")
 st.dataframe(summary_df, hide_index=True, use_container_width=True)
 
+
+# Items still needed (Remaining > 0)
+still_needed = []
+
+for row in summary:
+    if float(row["Remaining"]) > 0:
+        still_needed.append({
+            "Item": row["Item"],
+            "Quantity Still Needed": row["Remaining"]
+        })
+
+st.subheader("🛒 Items Still Needed")
+
+if still_needed:
+    st.dataframe(
+        pd.DataFrame(still_needed),
+        hide_index=True,
+        use_container_width=True
+    )
+else:
+    st.success("All required items have been contributed! 🎉")
+
 # Select item outside the form to avoid stale form values
 item = st.selectbox("What are you contributing?", list(items_needed.keys()))
 
